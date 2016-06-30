@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <classPathEntry location="D:/lib/mysql-connector-java-5.1.21.jar"/>
+    <context id="logisticsrepair">
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+    
+        <plugin type="mybatis.MysqlPagePlugin"/>
+      
+      
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+         connectionURL="jdbc:mysql://localhost/logistics_system?useUnicode=true&amp;characterEncoding=UTF8"
+         userId="root" password="hhcroot">
+        </jdbcConnection>
+        
+        <javaModelGenerator targetPackage="com.logistics.persistence.model"
+         targetProject="logisticsrepair/src/main/java"/>
+        <sqlMapGenerator targetPackage="com.logistics.persistence.xml"
+         targetProject="logisticsrepair/src/main/resources"/>
+        <javaClientGenerator targetPackage="com.logistics.persistence.mapper"
+         targetProject="logisticsrepair/src/main/java" type="XMLMAPPER"/>
+        
+		 
+        <table tableName="t_repair_allocation" schema="logistics_system" domainObjectName="RepairAllocation">
+        <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        
+         <table tableName="t_repair_category" schema="logistics_system" domainObjectName="RepairCategory">
+        <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        
+        <table tableName="t_repair_order" schema="logistics_system" domainObjectName="RepairOrder">
+        <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+
+		 <table tableName="t_user" schema="logistics_system" domainObjectName="User">
+        <generatedKey column="usr_id" sqlStatement="Mysql" identity="true"/>
+        </table>
+		
+		 <table tableName="t_user_info" schema="logistics_system" domainObjectName="UserInfo">
+        <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+		
+		<table tableName="t_placard" schema="logistics_system" domainObjectName="Placard">
+        <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+		
+		
+    </context>
+</generatorConfiguration>

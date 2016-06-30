@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="utf-8">
+  <title>更改个人信息</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Loading Bootstrap -->
+  <link href="../dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Loading Flat UI -->
+  <link href="../dist/css/flat-ui.css" rel="stylesheet">
+
+  <link rel="shortcut icon" href="../dist/img/favicon.ico">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+  <!--[if lt IE 9]>
+  <script src="../dist/js/vendor/html5shiv.js"></script>
+  <script src="../dist/js/vendor/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+<style>
+  body {
+    padding-bottom: 200px;
+  }
+</style>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+    <a class="navbar-brand" href="index.html">后勤报修系统</a>
+  </div>
+</nav><!-- /navbar -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h4>修改个人信息</h4>
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label for="inputEmail1" class="col-lg-2 control-label">用户名</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="userName" placeholder="请输入用户名">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword1" class="col-lg-2 control-label">手机号</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="phone" placeholder="请输入手机号">
+          </div>
+        </div>
+         <div class="form-group">
+          <label for="inputPassword1" class="col-lg-2 control-label">联系地址</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="address" placeholder="请输入联系地址">
+          </div>
+        </div>
+        <!--<div class="form-group">-->
+          <!--<label for="inputPassword1" class="col-lg-2 control-label">确认密码</label>-->
+          <!--<div class="col-lg-10">-->
+            <!--<input type="password" class="form-control" id="confirmPassword1" placeholder="请再次输入密码">-->
+          <!--</div>-->
+        <!--</div>-->
+        <div class="form-group">
+          <div class="col-lg-offset-2 col-lg-10">
+            <button type="button" class="btn btn-default" id="save">保存</button>
+          </div>
+        </div>
+      </form>
+    </div><!-- /.col-md-12 -->
+  </div><!-- /.row -->
+
+
+</div><!-- /.container -->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../dist/js/vendor/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../dist/js/flat-ui.min.js"></script>
+
+<script src="assets/js/application.js"></script>
+<script src="../js/changeinfo.js"></script>
+</body>
+</html>

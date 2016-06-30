@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>后勤报修系统-新增报修</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Loading Bootstrap -->
+  <link href="../dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/index.css" rel="stylesheet">
+
+  <!-- Loading Flat UI -->
+  <link href="../dist/css/flat-ui.min.css" rel="stylesheet">
+  <link href="assets/css/docs.css" rel="stylesheet">
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+  <!--[if lt IE 9]>
+  <script src="../dist/js/vendor/html5shiv.js"></script>
+  <script src="../dist/js/vendor/respond.min.js"></script>
+
+  <![endif]-->
+  <style>
+    @font-face {font-family: 'iconfont';
+      src: url('../fonts/iconfont/iconfont.eot'); /* IE9*/
+      src: url('../fonts/iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('../fonts/iconfont/iconfont.woff') format('woff'), /* chrome、firefox */
+      url('../fonts/iconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url('../fonts/iconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+    }
+    .iconfont{
+      font-family:"iconfont" !important;
+      font-size:16px;font-style:normal;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke-width: 0.2px;
+      -moz-osx-font-smoothing: grayscale;}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+    <a class="navbar-brand" href="index.html">后勤报修系统</a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse-01">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#fakelink">报修首页</a></li>
+      <li><a href="#fakelink">我要报修</a></li>
+      <li class="dropdown open">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">我的报修 <b class="caret"></b></a>
+        <span class="dropdown-arrow"></span>
+        <ul class="dropdown-menu">
+          <li><a href="#">新增报修</a></li>
+          <li><a href="#">报修历史</a></li>
+        </ul>
+      </li>
+      <li class="dropdown open">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">我的账号 <b class="caret"></b></a>
+        <span class="dropdown-arrow"></span>
+        <ul class="dropdown-menu">
+          <li><a href="changeinfo.html">修改个人资料</a></li>
+          <li><a href="changepw.html">修改密码</a></li>
+        </ul>
+      </li>
+    </ul>
+    <form class="navbar-form navbar-right" action="#" role="search">
+      <div class="form-group">
+        <div class="input-group">
+          <input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
+          <span class="input-group-btn">
+            <button type="submit" class="btn"><span class="fui-search"></span></button>
+          </span>
+        </div>
+      </div>
+    </form>
+  </div><!-- /.navbar-collapse -->
+</nav><!-- /navbar -->
+
+<div class="container">
+  <div class="row">
+      <div class="form-group clearfix">
+        <label class="col-sm-2 control-label" for="formGroupInputDefault">标题</label>
+        <div class="col-sm-10">
+          <input class="form-control" type="text" id="title" placeholder="请输入标题">
+        </div>
+      </div>
+
+
+
+    <div class="form-group clearfix">
+      <label class="col-sm-2 control-label" for="formGroupInputDefault">描述</label>
+      <div class="col-sm-10">
+        <textarea class="form-control" rows="3" id="des"></textarea>
+      </div>
+    </div>
+
+    <div class="form-group clearfix">
+      <label class="col-sm-2 control-label" for="formGroupInputDefault">分类</label>
+      <div class="col-sm-10" >
+        <select class="form-control select select-primary select-block mbl" id="categorySelect">
+          
+        </select>
+      </div>
+    </div>
+
+
+    <div class="form-group clearfix">
+      <label class="col-sm-2 control-label" for="formGroupInputDefault">地址</label>
+      <div class="col-sm-10">
+        <input class="form-control" type="text" id="address" placeholder="请输入地址">
+      </div>
+    </div>
+
+    <div class="form-group clearfix">
+      <label class="col-sm-2 control-label" for="formGroupInputDefault">联系电话</label>
+      <div class="col-sm-10">
+        <input class="form-control" type="text" id="phone" placeholder="请输入联系电话">
+      </div>
+    </div>
+
+
+    <div class="form-group clearfix">
+      <button class="btn btn-embossed btn-primary" id="save">
+        提交
+      </button>
+    </div>
+
+
+
+  </div>
+
+</div>
+
+<script src="../dist/js/vendor/jquery.min.js"></script>
+<script src="../dist/js/vendor/video.js"></script>
+<script src="../dist/js/flat-ui.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/add.js"></script>
+<script src="assets/js/prettify.js"></script>
+<script src="assets/js/application.js"></script>
+
+
+</body>
+</html>

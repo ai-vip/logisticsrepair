@@ -1,0 +1,176 @@
+@CHARSET "UTF-8";
+.choice{
+    height:30px;
+    background: #fff;
+    font-size: 15px;
+    line-height: 30px;
+    border-top-left-radius:8px;
+    border-top-right-radius: 8px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+   }
+#alldelete{
+    border:none;
+    background:#fff;
+}
+.choice ul li{
+    margin-left: 32px;
+    display: inline;
+}
+
+
+.choice ul li img{
+    width: 13px;
+    height: 13px;
+}
+
+.choice span{
+    font-size: 15px;
+    float: right;
+    margin-right: 30px
+}
+
+.table{
+     border: 1px solid #ccc;
+     position: relative;
+     top: -2px;
+}
+
+.t_1{
+    text-align: center;
+    background: #efefef;
+}
+.t_1 td{
+    height:40px;
+    font-size: 16px;
+    color: #666;
+}
+.t_2{
+    text-align: center;
+    background: #FFF;}
+
+
+.t_2 td{
+    border-bottom:1px solid #ccc;
+    font-size: 16px;
+    color: #666;
+    padding:10px 0;
+}
+
+
+.t_2 td:first-child:hover{color: #999;}
+
+.t_2 ul{
+    margin-right: 30px;
+    float: right;}
+
+.t_2 ul li{
+    display: inline;}
+   
+.t_2 ul li a{
+    border-left: 1px solid #ccc;
+    font-size: 12px;
+    color: #333;
+    padding:0 10px;}
+
+
+.t_2 ul li:first-child a{
+    border-left: none;}
+
+
+.t_3 {
+    background: #EFEFEF;
+    display: none;
+}
+.t_3 td{
+    height:40px;
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+}
+.t_3 ul{
+    margin-right: 30px;
+    float: right;}
+
+.t_3 ul li{
+    display: inline;
+}
+
+.t_3 ul li a{
+    border-left: 1px solid #ccc;
+    font-size: 12px;
+    color: #333;
+    padding:0 10px;
+}
+.t_3 ul li:first-child a{
+    border-left: none;}
+.slideDown{
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+}
+.addCat{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 260px;
+    margin-left: -130px;
+    display: none;
+    z-index: 9;
+}
+.addCatCaption{
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    background-color: #f0f0f0;
+}
+.addCatCaption span{
+    display: block;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    line-height: 30px;
+}
+.addCatCaption i{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: url(/img/bacclose.png) center no-repeat;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+.addCatContent{
+    padding: 15px 0 0 20px;
+}
+.addCatContent>div{
+    margin-bottom: 10px;
+}
+.addCatContent span{
+    font-size: 12px;
+    color: #333;
+    padding-right: 10px;
+}
+.need2em{
+    padding-left: 2em;
+}
+.submitCat{
+    border-top: 1px solid #ccc;
+    padding: 7px 0;
+    background-color: #f0f0f0;
+}
+.submitCat input{
+    border: 1px solid #ccc;
+    background-color: #fff;
+    line-height: 20px;
+    padding: 0 5px;
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin: 0 auto;
+}
+
+#addMainCatButton{
+    cursor: pointer;
+}

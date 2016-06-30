@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/jquery-2.2.3.js">
+</script>
+<script>
+location.assign('front/docs/login.html');
+$(document).ready(function(){
+	//获取公告
+  $("#getLastedPlacard").click(function(){
+    $.get("placard/getLastedPlacard",
+    {
+      name:"Donald Duck",
+      city:"Duckburg"
+    },
+    function(data,status){
+      $(".title").text(data.response.lastedPlacard.title);
+      $(".content").text(data.response.lastedPlacard.content);
+      alert("Data: " + data.response.lastedPlacard.content);
+    });
+  });
+  
+  //登录
+  $("#login").click(function(){
+	    $.get("user/login",
+	    {
+	    	userName:"huhaichao",
+	    	password:"123456",
+	    	rememberMe:"1"
+	    },
+	    function(data,status){
+	      $(".welcome").text("欢迎您： " + data.response.user.usrAccount);
+	      alert("欢迎您： " + data.response.user.usrAccount);
+	    });
+	  });
+});
+</script>
+</head>
+<body>
+<h2 class="welcome"></h2>
+<h3>最新海报</h3>
+标题:<p class="title"><p>
+内容：<p class="content"><p>
+<button id="getLastedPlacard">发送一个 HTTP POST 请求道页面并获取返回内容</button><br/>
+<button id="login">登录</button>
+
+</body>
+</html>
+

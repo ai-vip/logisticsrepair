@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>后勤报修系统</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Loading Bootstrap -->
+  <link href="../dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/index.css" rel="stylesheet">
+
+  <!-- Loading Flat UI -->
+  <link href="../dist/css/flat-ui.min.css" rel="stylesheet">
+  <link href="assets/css/docs.css" rel="stylesheet">
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+  <!--[if lt IE 9]>
+  <script src="../dist/js/vendor/html5shiv.js"></script>
+  <script src="../dist/js/vendor/respond.min.js"></script>
+
+  <![endif]-->
+  <style>
+    @font-face {font-family: 'iconfont';
+      src: url('../fonts/iconfont/iconfont.eot'); /* IE9*/
+      src: url('../fonts/iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('../fonts/iconfont/iconfont.woff') format('woff'), /* chrome、firefox */
+      url('../fonts/iconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url('../fonts/iconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+    }
+    .iconfont{
+      font-family:"iconfont" !important;
+      font-size:16px;font-style:normal;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke-width: 0.2px;
+      -moz-osx-font-smoothing: grayscale;}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+    <a class="navbar-brand" href="index.html">后勤报修系统</a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse-01">
+    <ul class="nav navbar-nav navbar-center">
+      <li class="active"><a href="index.html">报修首页</a></li>
+    <!--   <li><a href="#fakelink">我要报修</a></li>
+ -->      <li class="dropdown  ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">我的报修 <b class="caret"></b></a>
+        <span class="dropdown-arrow"></span>
+        <ul class="dropdown-menu">
+          <li><a href="add.html">新增报修</a></li>
+          <li><a href="history.html">报修历史</a></li>
+        </ul>
+      </li>
+      <li class="dropdown  ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">我的账号 <b class="caret"></b></a>
+        <span class="dropdown-arrow"></span>
+        <ul class="dropdown-menu">
+          <li><a href="changeinfo.html">修改个人资料</a></li>
+          <li><a href="changepw.html">修改密码</a></li>
+           <li><a id="exit">退出</a></li>
+        </ul>
+      </li>
+      <li id="login-button" ><a href="login.html">登录</a></li>
+    </ul>
+     <form class="navbar-form navbar-right" action="index.html" role="search">
+      <div class="form-group">
+        <div class="input-group">
+          <input class="form-control" id="navbarInput-01" name="orderName" type="search" placeholder="Search">
+          <span class="input-group-btn">
+            <button type="submit" class="btn" ><span class="fui-search"></span></button>
+          </span>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- /.navbar-collapse -->
+</nav><!-- /navbar -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 index_main_content">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="input-group">
+          <input type="text" class="form-control" id="orderName" placeholder="请输入关键字" id="search-query-3">
+          <span class="input-group-btn">
+          <button type="submit" class="btn" id="searchButton"><span class="fui-search"></span></button>
+          </span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <select class="form-control select select-primary select-block mbl" id="timeSelect">
+            <option value="">所有时间</option>
+            <option value="1">一周内</option>
+            <option value="2">一月内</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <select class="form-control select select-primary select-block mbl" id="statusSelect">
+            <option value="">所有状态</option>
+            <option value="1">未受理</option>
+            <option value="2">已受理</option>
+            <option value="3">已完成</option>
+          </select>
+        </div>
+      </div>
+      <!-- 订单列表 -->
+      <div class="row" id="indexOrderList">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title"><i class="iconfont">&#xe602;</i>空调热水器维修<span>2016-06-01 18:33:33</span></h3>
+          </div>
+          <div class="panel-body">
+          	  热水器坏了，小红红灯亮着，但后又灭了，可能是短路了。
+          </div>
+          <div class="panel_status"><p class="text-right"><i class="iconfont">&#xe606;</i>已受理</p></div>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title"><i class="iconfont">&#xe600;</i>零星维修<span>2016-06-01 18:33:33</span></h3>
+          </div>
+          <div class="panel-body">
+            热水器坏了，小红红灯亮着，但后又灭了，可能是短路了。
+          </div>
+          <div class="panel_status"><p class="text-right"><i class="iconfont">&#xe604;</i>未受理</p></div>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title"><i class="iconfont">&#xe601;</i>宽带维修<span>2016-06-01 18:33:33</span></h3>
+          </div>
+          <div class="panel-body">
+            热水器坏了，小红红灯亮着，但后又灭了，可能是短路了。
+          </div>
+          <div class="panel_status"><p class="text-right"><i class="iconfont">&#xe605;</i>已完成</p></div>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title"><i class="iconfont">&#xe603;</i>房屋维修<span>2016-06-01 18:33:33</span></h3>
+          </div>
+          <div class="panel-body">
+            热水器坏了，小红红灯亮着，但后又灭了，可能是短路了。
+          </div>
+          <div class="panel_status"><p class="text-right"><i class="iconfont">&#xe605;</i>已完成</p></div>
+        </div>
+      </div>
+  	  <!-- 订单列表 -->
+ 	<!-- 分页 -->
+    <div class="pagination">
+        <ul id="pageUl">
+          <li class="previous" id="previous"><a href="#fakelink" class="fui-arrow-left" id="previous"></a></li>
+          <!-- <li><a href="#fakelink">1</a></li>
+          <li><a href="#fakelink">2</a></li>
+          <li><a href="#fakelink">3</a></li>
+          <li><a href="#fakelink">4</a></li>
+          <li><a href="#fakelink">5</a></li>
+          <li><a href="#fakelink">6</a></li>
+          <li><a href="#fakelink">7</a></li>
+          <li><a href="#fakelink">8</a></li>
+          <li><a href="#fakelink">9</a></li>
+          <li><a href="#fakelink">10</a></li> -->
+          <li class="pagination-dropdown dropup active " id="dropdown">
+            <a href="#fakelink" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fui-triangle-up"></i>
+            </a>
+            <ul class="dropdown-menu" id="pageRanges">
+             <!--  <li><a href="#fakelink">10–20</a></li>
+              <li><a href="#fakelink">20–30</a></li>
+              <li><a href="#fakelink">40–50</a></li> -->
+            </ul>
+          </li>
+          <li class="next"><a href="#fakelink" class="fui-arrow-right"></a></li>
+        </ul>
+      </div>
+    <!-- 分页 -->
+    </div>
+    
+    
+   
+    <div class="col-md-4">
+
+      <div class="row">
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading">快速报修</div>
+          <!-- List group -->
+          <ul class="list-group" id="category-ul">
+            <li class="list-group-item">
+              <span>1.宿舍零星报修</span>
+              <a href="add.html"><button type="button" class="btn btn-primary" >我要报修</button></a>
+            </li>
+            <li class="list-group-item">
+              <span>2.网络报修</span>
+                <a href="add.html"><button type="button" class="btn btn-primary" >我要报修</button></a>
+            </li>
+            <li class="list-group-item">
+              <span>3.水电保修</span>
+                <a href="add.html"><button type="button" class="btn btn-primary" >我要报修</button></a>
+            </li>
+            <li class="list-group-item">
+              <span>4.房屋问题</span>
+                <a href="add.html"><button type="button" class="btn btn-primary" >我要报修</button></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="panel panel-info">
+          <div class="panel-heading">公告</div>
+          <div class="panel-body" id="placard">
+            欢迎广大师生积极使用后勤报修系统。
+          </div>
+        </div>
+
+        <div class="panel panel-info">
+          <div class="panel-heading">报修电话</div>
+          <div class="panel-body">
+            学生咨询电话：1566666666
+          </div>
+        </div>
+      </div>
+    
+   
+    
+    </div>
+  </div>
+</div>
+
+<script src="../dist/js/vendor/jquery.min.js"></script>
+<script src="../dist/js/vendor/video.js"></script>
+<script src="../dist/js/flat-ui.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="assets/js/prettify.js"></script>
+<script src="assets/js/application.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+    <script type="text/javascript">
+	location.assign('front/docs/login.html');
+        function loadXMLDoc()
+        {
+            var xmlhttp;
+
+            if (window.XMLHttpRequest)
+              {// code for IE7+, Firefox, Chrome, Opera, Safari
+                  xmlhttp=new XMLHttpRequest();
+              }
+              else
+              {// code for IE6, IE5
+                  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+              }
+
+              xmlhttp.onreadystatechange=function()
+              {
+              if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {    
+                    var json=xmlhttp.responseText;
+                    var data = eval("(" + json + ")");
+                    document.getElementById("myDiv").innerHTML=data.response.lastedPlacard.content;
+                }
+              }
+
+              xmlhttp.open("GET","placard/getLastedPlacard",true);
+               xmlhttp.setRequestHeader("Access-Control-Allow-Origin","*");
+              xmlhttp.send();
+
+        }
+</script>
+</head>
+<body>
+    <div id="myDiv"><h3>Let AJAX change this text</h3></div>
+    <button type="button" onclick="loadXMLDoc()">Change Content</button>
+
+</body>
+</html>
