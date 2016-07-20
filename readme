@@ -1,0 +1,16 @@
+1、在mysql中新建一个数据库，名为logistics_system，编码格式为UTF-8
+2、导入数据到数据库
+3、修改host文件（C:\Windows\System32\drivers\etc\host），添加一行记录
+	127.0.0.1  r.tulingcloud.cn
+	这是因为保存登录信息的cookie的域名设置的为tulingcloud.cn，
+	使用localhost将出现不能读取到cookie信息的情况，登录信息不能读取
+4、使用安装好maven、tomcat的Eclipse EE导入项目，转换为maven项目，并运行。或者部署war包到tomcat运行。
+5、通过r.tulingcloud.cn:8080/logisticsrepair地址访问项目
+
+测试账户：
+    管理员 	admin    	密码：123456
+    维修人员 	repair 		密码：123456
+    普通用户	huhaichao 	密码：123456
+
+
+ps:在线演示repair.tulingcloud.cn
