@@ -13,9 +13,9 @@ import com.logistics.persistence.model.RepairAllocation;
 import com.logistics.persistence.model.RepairOrder;
 import com.logistics.persistence.model.User;
 
-import common.utils.ValidateUtils;
-import common.utils.exception.ServiceException;
-import common.utils.response.Res;
+import com.logistics.common.utils.ValidateUtils;
+import com.logistics.common.utils.exception.ServiceException;
+import com.logistics.common.utils.response.Res;
 
 @Service
 public class RepairAllocationService {

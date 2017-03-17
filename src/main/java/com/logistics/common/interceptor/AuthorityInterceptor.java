@@ -2,9 +2,7 @@
  * 
  */
 
-package common.interceptor;
-
-import java.util.Enumeration;
+package com.logistics.common.interceptor;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -18,9 +16,9 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import com.logistics.persistence.manager.UserManager;
 import com.logistics.persistence.model.User;
 
-import common.utils.ValidateUtils;
-import common.utils.exception.ServiceException;
-import common.utils.response.Res;
+import com.logistics.common.utils.ValidateUtils;
+import com.logistics.common.utils.exception.ServiceException;
+import com.logistics.common.utils.response.Res;
 
 /**
  * 权限验证类

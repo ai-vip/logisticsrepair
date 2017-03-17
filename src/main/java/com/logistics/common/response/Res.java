@@ -1,4 +1,4 @@
-package common.response;
+package com.logistics.common.response;
 
 import java.util.HashMap;
 import java.util.Map;

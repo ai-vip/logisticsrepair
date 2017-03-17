@@ -18,10 +18,10 @@ import com.logistics.persistence.manager.UserManager;
 import com.logistics.persistence.model.User;
 import com.logistics.persistence.model.UserInfo;
 
-import common.utils.ValidateUtils;
-import common.utils.exception.ServiceException;
-import common.utils.login.SessionBean;
-import common.utils.response.Res;
+import com.logistics.common.utils.ValidateUtils;
+import com.logistics.common.utils.exception.ServiceException;
+import com.logistics.common.utils.login.SessionBean;
+import com.logistics.common.utils.response.Res;
 
 @Service
 public class UserService {

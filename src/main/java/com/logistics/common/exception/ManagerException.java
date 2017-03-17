@@ -1,11 +1,11 @@
-package common.utils.exception;
+package com.logistics.common.exception;
 
 public class ManagerException extends ServiceException {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -8107528460053894519L;
+	private static final long serialVersionUID = -1374520290618114323L;
 
 	public ManagerException() {
 		super();

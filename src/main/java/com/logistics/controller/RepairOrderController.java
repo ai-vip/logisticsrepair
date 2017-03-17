@@ -17,9 +17,9 @@ import com.logistics.persistence.model.User;
 import com.logistics.service.RepairOrderService;
 import com.logistics.service.UserService;
 
-import common.Page;
-import common.utils.exception.ServiceException;
-import common.utils.response.Res;
+import com.logistics.common.Page;
+import com.logistics.common.utils.exception.ServiceException;
+import com.logistics.common.utils.response.Res;
 
 @Controller
 @RequestMapping("/repairOrder")

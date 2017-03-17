@@ -1,4 +1,4 @@
-package common.utils.response;
+package com.logistics.common.utils.response;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -13,7 +13,7 @@ import org.springframework.http.server.ServletServerHttpResponse;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.json.MappingJacksonJsonView;
 
-import common.exception.ServiceException;
+import com.logistics.common.exception.ServiceException;
 
 /**
  * 封装返回json数据

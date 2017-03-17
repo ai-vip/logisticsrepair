@@ -12,8 +12,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.logistics.service.PlacardService;
 
-import common.utils.exception.ServiceException;
-import common.utils.response.Res;
+import com.logistics.common.utils.exception.ServiceException;
+import com.logistics.common.utils.response.Res;
 
 @Controller
 @RequestMapping("/placard")

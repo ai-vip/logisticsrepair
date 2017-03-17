@@ -1,4 +1,4 @@
-package common.utils.exception;
+package com.logistics.common.utils.exception;
 
 public class ServiceException extends RuntimeException {
 

@@ -1,4 +1,4 @@
-package common.utils;
+package com.logistics.common.utils;
 
 import java.sql.Timestamp;
 import java.text.ParseException;

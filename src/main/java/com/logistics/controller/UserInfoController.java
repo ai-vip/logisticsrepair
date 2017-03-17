@@ -1,7 +1,5 @@
 package com.logistics.controller;
 
-import java.util.Enumeration;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -15,8 +13,8 @@ import org.springframework.web.servlet.ModelAndView;
 import com.logistics.service.UserInfoService;
 import com.logistics.service.UserService;
 
-import common.utils.exception.ServiceException;
-import common.utils.response.Res;
+import com.logistics.common.utils.exception.ServiceException;
+import com.logistics.common.utils.response.Res;
 
 @Controller
 @RequestMapping("/userInfo")

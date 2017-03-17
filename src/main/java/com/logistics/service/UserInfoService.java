@@ -9,9 +9,9 @@ import org.springframework.transaction.annotation.Transactional;
 import com.logistics.persistence.manager.UserInfoManager;
 import com.logistics.persistence.model.UserInfo;
 
-import common.utils.ValidateUtils;
-import common.utils.exception.ServiceException;
-import common.utils.response.Res;
+import com.logistics.common.utils.ValidateUtils;
+import com.logistics.common.utils.exception.ServiceException;
+import com.logistics.common.utils.response.Res;
 
 @Service
 public class UserInfoService {

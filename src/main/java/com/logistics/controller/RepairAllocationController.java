@@ -14,8 +14,8 @@ import com.logistics.persistence.model.User;
 import com.logistics.service.RepairAllocationService;
 import com.logistics.service.UserService;
 
-import common.utils.exception.ServiceException;
-import common.utils.response.Res;
+import com.logistics.common.utils.exception.ServiceException;
+import com.logistics.common.utils.response.Res;
 
 @Controller
 @RequestMapping("/repairAllocation")

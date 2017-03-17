@@ -13,8 +13,8 @@ import org.springframework.web.servlet.ModelAndView;
 import com.logistics.persistence.model.User;
 import com.logistics.service.UserService;
 
-import common.utils.exception.ServiceException;
-import common.utils.response.Res;
+import com.logistics.common.utils.exception.ServiceException;
+import com.logistics.common.utils.response.Res;
 
 @Controller
 @RequestMapping("/user")

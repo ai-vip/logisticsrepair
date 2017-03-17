@@ -12,8 +12,8 @@ import com.logistics.persistence.model.RepairOrder;
 import com.logistics.persistence.model.RepairOrderExample;
 import com.logistics.persistence.model.RepairOrderExample.Criteria;
 
-import common.Page;
-import common.utils.ValidateUtils;
+import com.logistics.common.Page;
+import com.logistics.common.utils.ValidateUtils;
 @Component
 public class RepairOrderManager extends BaseManager<RepairOrderDao> {
 	@Autowired

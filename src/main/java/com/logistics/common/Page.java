@@ -1,4 +1,4 @@
-package common;
+package com.logistics.common;
 
 public class Page {
 

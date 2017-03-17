@@ -1,4 +1,4 @@
-package common.login;
+package com.logistics.common.utils.login;
 
 public class SessionBean {
 	private Long userId;
